@@ -8,4 +8,6 @@
 
 This is a simple index.html one-pager static landing page for the Build It Faster podcast.
 
+Keep media embeds responsive and consistent with the existing Tailwind visual language.
+
 ...

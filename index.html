@@ -49,30 +49,49 @@
   </style>
 </head>
 <body class="min-h-screen">
-  <main class="relative mx-auto flex min-h-screen max-w-4xl flex-col justify-center px-5 py-12 sm:px-8 md:py-16">
+  <main class="relative mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-5 py-12 sm:px-8 lg:py-14">
     <div class="absolute inset-x-6 -top-24 h-64 rounded-full bg-gradient-to-r from-accent/15 via-white/5 to-accent/10 blur-3xl sm:inset-x-10 sm:-top-32 sm:h-72"></div>
-    <div class="z-10 flex flex-col gap-12 md:gap-14">
+    <div class="z-10 flex flex-col gap-10 lg:gap-12">
       <div class="pill w-fit">
         <span class="h-2 w-2 rounded-full bg-accent"></span>
         <span class="tracking-wide text-slate-200">Build It Faster · Weekly drops</span>
       </div>
-      <header class="flex flex-col gap-6 md:gap-7">
-        <p class="text-xs font-medium uppercase tracking-[0.35em] text-slate-400">Podcast</p>
-        <h1 class="font-display text-4xl font-semibold leading-[1.05] text-white sm:text-5xl md:text-6xl">
-          Ship sharper. <span class="text-accent">Build It Faster</span> is for builders obsessed with speed without losing craft.
-        </h1>
-        <p class="max-w-2xl text-base text-slate-300 sm:text-lg">
-          Short, focused episodes on workflows, tools, and habits that keep momentum high. No fluff—just tactics you can use this week.
-        </p>
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-          <a class="pill w-full justify-center hover:border-accent/60 hover:text-white sm:w-auto" href="https://open.spotify.com/show/28PWQhraVCBTSpbknJ" target="_blank" rel="noreferrer">
-            <span class="text-accent">▶</span> Listen on Spotify
-          </a>
-          <a class="pill w-full justify-center hover:border-accent/60 hover:text-white sm:w-auto" href="https://www.youtube.com/@BuildFasterPod" target="_blank" rel="noreferrer">
-            <span class="text-accent">⬤</span> Watch on YouTube
-          </a>
-        </div>
-      </header>
+      <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
+        <header class="flex flex-col gap-6">
+          <p class="text-xs font-medium uppercase tracking-[0.35em] text-slate-400">Podcast</p>
+          <h1 class="font-display text-4xl font-semibold leading-[1.05] text-white sm:text-5xl lg:text-[2.5rem]">
+            Ship sharper. <span class="text-accent">Build It Faster</span> is for builders obsessed with speed without losing craft.
+          </h1>
+          <p class="max-w-2xl text-base text-slate-300 sm:text-lg">
+            Short, focused episodes on workflows, tools, and habits that keep momentum high. No fluff—just tactics you can use this week.
+          </p>
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+            <a class="pill w-full justify-center hover:border-accent/60 hover:text-white sm:w-auto" href="https://open.spotify.com/show/28PWQhraVCBTSpbknJ" target="_blank" rel="noreferrer">
+              <span class="text-accent">▶</span> Listen on Spotify
+            </a>
+            <a class="pill w-full justify-center hover:border-accent/60 hover:text-white sm:w-auto" href="https://www.youtube.com/@BuildFasterPod" target="_blank" rel="noreferrer">
+              <span class="text-accent">⬤</span> Watch on YouTube
+            </a>
+          </div>
+        </header>
+        <section aria-labelledby="featured-episode-heading" class="flex flex-col gap-4">
+          <div class="flex items-center justify-between gap-4">
+            <h2 id="featured-episode-heading" class="font-display text-xl font-semibold text-white sm:text-2xl">Featured episode</h2>
+            <span class="text-[0.7rem] uppercase tracking-[0.3em] text-slate-500">Watch now</span>
+          </div>
+          <div class="aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl shadow-black/30">
+            <iframe
+              class="h-full w-full"
+              src="https://www.youtube.com/embed/SV0YZlPeBdY?list=PLbDGFJVfiANg"
+              title="A Simpler Alternative to Peer-to-Peer Sync"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+      </div>
       <section class="flex flex-col gap-3 text-slate-300 sm:flex-row sm:items-center sm:gap-4">
         <span class="text-[0.7rem] uppercase tracking-[0.3em] text-slate-500">Follow</span>
         <div class="flex flex-wrap gap-3">

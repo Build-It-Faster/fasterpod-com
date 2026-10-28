@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Build It Faster — Podcast</title>
-  <meta name="description" content="Build It Faster is a podcast about shipping better products with sharper tools and habits.">
+  <meta name="description" content="A podcast about the tools and workflows we use to build software.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" referrerpolicy="no-referrer">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,52 +33,53 @@
       a {
         @apply transition-colors duration-150;
       }
+      a:focus-visible {
+        outline: 2px solid #f3c614;
+        outline-offset: 5px;
+      }
     }
     @layer components {
       .pill {
-        @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium backdrop-blur;
-      }
-      .link {
-        @apply inline-flex items-center gap-2 text-sm text-slate-200 hover:text-white;
+        @apply inline-flex min-h-12 items-center gap-3 rounded-lg border border-white/20 px-5 py-3 text-sm font-medium;
       }
       .social-link {
-        @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-accent/60 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-ink;
+        @apply inline-flex min-h-11 items-center justify-center text-sm text-slate-400 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-ink;
       }
     }
   </style>
 </head>
 <body class="min-h-screen">
-  <main class="relative mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-5 py-12 sm:px-8 lg:py-14">
-    <div class="absolute inset-x-6 -top-24 h-64 rounded-full bg-gradient-to-r from-accent/15 via-white/5 to-accent/10 blur-3xl sm:inset-x-10 sm:-top-32 sm:h-72"></div>
+  <main class="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 py-8 sm:px-10 sm:py-12 lg:px-16">
+    <div aria-hidden="true" class="mb-12 flex items-center gap-2 sm:mb-16">
+      <span class="h-2 w-8 bg-accent"></span>
+      <span class="h-2 w-4 bg-accent/60"></span>
+      <span class="h-2 w-2 bg-accent/30"></span>
+      <span class="ml-4 h-px flex-1 bg-white/15"></span>
+    </div>
     <div class="z-10 flex flex-col gap-10 lg:gap-12">
-      <div class="pill w-fit">
-        <span class="h-2 w-2 rounded-full bg-accent"></span>
-        <span class="tracking-wide text-slate-200">Build It Faster · Weekly drops</span>
-      </div>
-      <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
+      <div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
         <header class="flex flex-col gap-6">
-          <p class="text-xs font-medium uppercase tracking-[0.35em] text-slate-400">Podcast</p>
-          <h1 class="font-display text-4xl font-semibold leading-[1.05] text-white sm:text-5xl lg:text-[2.5rem]">
-            Ship sharper. <span class="text-accent">Build It Faster</span> is for builders obsessed with speed without losing craft.
+          <h1 class="font-display text-[clamp(3.75rem,8vw,7rem)] font-semibold leading-[0.9] tracking-[-0.065em] text-white">
+            Build It<br><span class="text-accent">Faster.</span>
           </h1>
-          <p class="max-w-2xl text-base text-slate-300 sm:text-lg">
-            Short, focused episodes on workflows, tools, and habits that keep momentum high. No fluff—just tactics you can use this week.
+          <p class="max-w-sm text-lg leading-relaxed text-slate-300 sm:text-xl">
+            A podcast about the tools and workflows we use to build software.
           </p>
-          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-            <a class="pill w-full justify-center hover:border-accent/60 hover:text-white sm:w-auto" href="https://open.spotify.com/show/28PWQhraVCBTSpbknJ" target="_blank" rel="noreferrer">
-              <span class="text-accent">▶</span> Listen on Spotify
+          <div class="mt-2 flex flex-wrap gap-3">
+            <a class="pill bg-accent text-ink hover:bg-[#ffdc50]" href="https://www.youtube.com/@BuildFasterPod" target="_blank" rel="noreferrer">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Watch on YouTube
             </a>
-            <a class="pill w-full justify-center hover:border-accent/60 hover:text-white sm:w-auto" href="https://www.youtube.com/@BuildFasterPod" target="_blank" rel="noreferrer">
-              <span class="text-accent">⬤</span> Watch on YouTube
+            <a class="pill text-white hover:border-white/50 hover:bg-white/5" href="https://open.spotify.com/show/28PWQhraVCBTSpbknJ" target="_blank" rel="noreferrer">
+              Listen on Spotify
             </a>
           </div>
         </header>
         <section aria-labelledby="featured-episode-heading" class="flex flex-col gap-4">
           <div class="flex items-center justify-between gap-4">
-            <h2 id="featured-episode-heading" class="font-display text-xl font-semibold text-white sm:text-2xl">Latest video</h2>
-            <span class="text-[0.7rem] uppercase tracking-[0.3em] text-slate-500">Watch now</span>
+            <h2 id="featured-episode-heading" class="font-display text-lg font-medium text-slate-200">Latest video</h2>
           </div>
-          <div class="aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl shadow-black/30">
+          <div class="aspect-video overflow-hidden rounded-xl border border-white/15 bg-black shadow-[0_20px_60px_-20px_rgba(0,0,0,0.65)]">
             <!-- Starts with the first playlist item. Keep Longs ordered newest first on YouTube. -->
             <iframe
               class="h-full w-full"
@@ -93,33 +93,11 @@
           </div>
         </section>
       </div>
-      <section class="flex flex-col gap-3 text-slate-300 sm:flex-row sm:items-center sm:gap-4">
-        <span class="text-[0.7rem] uppercase tracking-[0.3em] text-slate-500">Follow</span>
-        <div class="flex flex-wrap gap-3">
-          <a class="social-link" href="https://x.com/buildfasterpod" target="_blank" rel="noreferrer" title="X" aria-label="Follow Build It Faster on X">
-            <i class="fa-brands fa-x-twitter text-lg" aria-hidden="true"></i>
-            <span class="sr-only">X</span>
-          </a>
-          <a class="social-link" href="https://www.tiktok.com/@builditfaster" target="_blank" rel="noreferrer" title="TikTok" aria-label="Follow Build It Faster on TikTok">
-            <i class="fa-brands fa-tiktok text-lg" aria-hidden="true"></i>
-            <span class="sr-only">TikTok</span>
-          </a>
-          <a class="social-link" href="https://www.youtube.com/@BuildFasterPod" target="_blank" rel="noreferrer" title="YouTube" aria-label="Watch Build It Faster on YouTube">
-            <i class="fa-brands fa-youtube text-lg" aria-hidden="true"></i>
-            <span class="sr-only">YouTube</span>
-          </a>
-          <a class="social-link" href="https://open.spotify.com/show/28PWQhraVCBTSpbknJ" target="_blank" rel="noreferrer" title="Spotify" aria-label="Listen to Build It Faster on Spotify">
-            <i class="fa-brands fa-spotify text-lg" aria-hidden="true"></i>
-            <span class="sr-only">Spotify</span>
-          </a>
-          <a class="social-link" href="https://substack.com/@buildfasterpod" target="_blank" rel="noreferrer" title="Substack" aria-label="Read Build It Faster on Substack">
-            <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 6.75c0-.4.32-.75.75-.75h12.5c.4 0 .75.35.75.75v1.25H5.75A.75.75 0 0 1 5 7.25zm0 3c0-.4.32-.75.75-.75h12.5c.4 0 .75.35.75.75v1.25H5.75A.75.75 0 0 1 5 10.25zm0 3c0-.4.32-.75.75-.75h12.5c.4 0 .75.35.75.75V18l-7 2-7-2z"/>
-            </svg>
-            <span class="sr-only">Substack</span>
-          </a>
-        </div>
-      </section>
+      <nav aria-label="More from Build It Faster" class="mt-2 flex gap-7 border-t border-white/15 pt-5">
+        <a class="social-link" href="https://x.com/buildfasterpod" target="_blank" rel="noreferrer">X</a>
+        <a class="social-link" href="https://www.tiktok.com/@builditfaster" target="_blank" rel="noreferrer">TikTok</a>
+        <a class="social-link" href="https://substack.com/@buildfasterpod" target="_blank" rel="noreferrer">Substack</a>
+      </nav>
     </div>
   </main>
 </body>

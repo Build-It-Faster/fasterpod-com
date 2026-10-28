@@ -76,14 +76,15 @@
         </header>
         <section aria-labelledby="featured-episode-heading" class="flex flex-col gap-4">
           <div class="flex items-center justify-between gap-4">
-            <h2 id="featured-episode-heading" class="font-display text-xl font-semibold text-white sm:text-2xl">Featured episode</h2>
+            <h2 id="featured-episode-heading" class="font-display text-xl font-semibold text-white sm:text-2xl">Latest Longs episode</h2>
             <span class="text-[0.7rem] uppercase tracking-[0.3em] text-slate-500">Watch now</span>
           </div>
           <div class="aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl shadow-black/30">
+            <!-- Starts with the first playlist item. Keep Longs ordered newest first on YouTube. -->
             <iframe
               class="h-full w-full"
-              src="https://www.youtube.com/embed/SV0YZlPeBdY?list=PLbDGFJVfiANg"
-              title="A Simpler Alternative to Peer-to-Peer Sync"
+              src="https://www.youtube.com/embed?listType=playlist&amp;list=PLbDGFJVfiANg"
+              title="Build It Faster — Longs playlist, latest episode first"
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

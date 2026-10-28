@@ -10,4 +10,6 @@ This is a simple index.html one-pager static landing page for the Build It Faste
 
 Keep media embeds responsive and consistent with the existing Tailwind visual language.
 
+The featured player embeds the Longs playlist (`PLbDGFJVfiANg`) without a fixed video ID. Keep the playlist ordered newest first on YouTube so new episodes appear automatically. Use a playlist-level iframe title rather than a specific episode title.
+
 ...
